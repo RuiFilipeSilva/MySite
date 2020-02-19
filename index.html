@@ -1,0 +1,385 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <title>MyPersoalSite</title>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link href="https://fonts.googleapis.com/css?family=Roboto+Mono&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Raleway&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Oswald&display=swap" rel="stylesheet">
+</head>
+<style>
+    .arrow,
+    .arrow:before {
+        position: absolute;
+        left: 50%;
+    }
+
+    .arrow {
+        width: 40px;
+        height: 40px;
+        top: 230%;
+        margin: -20px 0 0 -20px;
+        -webkit-transform: rotate(45deg);
+        border-left: none;
+        border-top: none;
+        border-right: 2px black solid;
+        border-bottom: 2px black solid;
+    }
+
+    .arrow:before {
+        content: '';
+        width: 20px;
+        height: 20px;
+        top: 50%;
+        margin: -10px 0 0 -10px;
+        border-left: none;
+        border-top: none;
+        border-right: 1px grey solid;
+        border-bottom: 1px grey solid;
+        animation-duration: 2s;
+        animation-iteration-count: infinite;
+        animation-name: arrow
+    }
+
+    @keyframes arrow {
+        0% {
+            opacity: 1
+        }
+
+        100% {
+            opacity: 0;
+            transform: translate(-10px, -10px)
+        }
+    }
+
+    .sidenav {
+        height: 100%;
+        width: 260px;
+        position: fixed;
+        z-index: 1;
+        top: 0;
+        left: 0;
+        background-color: black;
+        overflow-x: hidden;
+        padding-top: 130px;
+    }
+
+    .sidenav #nav a {
+        padding: 6px 8px 6px 16px;
+        text-decoration: none;
+        font-size: 25px;
+        color: #818181;
+        display: block;
+        text-align: center;
+        font-family: 'Raleway', sans-serif;
+    }
+
+    .sidenav #nav a:hover {
+        color: #f1f1f1;
+    }
+
+    .main {
+        margin-left: 250px;
+        /* Same as the width of the sidenav */
+        font-size: 28px;
+        /* Increased text to enable scrolling */
+        padding: 0px 10px;
+    }
+
+    @media screen and (max-height: 450px) {
+        .sidenav {
+            padding-top: 15px;
+        }
+
+        .sidenav a {
+            font-size: 18px;
+        }
+    }
+
+    .sidenav img {
+        width: 250px;
+        position: relative;
+        left: 5%;
+    }
+
+    .sidenav h2 {
+        color: white;
+        text-align: center;
+        font-family: 'Oswald', sans-serif;
+    }
+
+    #header {
+        height: 935px;
+        width: 100%;
+        opacity: 0.2;
+    }
+
+    #title {
+        position: absolute;
+        top: 40%;
+        left: 57%;
+        transform: translate(-50%, -50%);
+        text-align: center;
+    }
+
+    #title h3,
+    h5 {
+        font-family: 'Raleway', sans-serif;
+    }
+
+    #title p {
+        font-family: 'Oswald', sans-serif;
+        font-size: 100px;
+    }
+
+    #about h1 {
+        font-family: 'Oswald', sans-serif;
+    }
+
+    #works h1 {
+        font-family: 'Oswald', sans-serif;
+    }
+
+    #about,
+    #works p {
+        font-family: 'Raleway', sans-serif;
+        text-align: justify;
+    }
+
+    #about h2 {
+        font-family: 'Oswald', sans-serif;
+    }
+
+    #divWorks {
+        background-color: #6C757D;
+        color: white;
+    }
+
+    #pc {
+        width: 250px;
+        margin-left: 14%;
+    }
+
+    #works p {
+        text-align: center;
+    }
+
+    #face {
+        width: 40px;
+
+    }
+
+    #git {
+        width: 50px;
+    }
+
+    #insta {
+        width: 40px;
+    }
+
+    #socials {
+        margin-top: 100%;
+    }
+
+    #divContacts h1 {
+        font-family: 'Oswald', sans-serif;
+    }
+
+    #divContacts p {
+        font-family: 'Raleway', sans-serif;
+    }
+
+    #contacts {
+        padding-top: 15%;
+    }
+</style>
+
+<body>
+    <div class="sidenav">
+        <div id="nav">
+            <img src="./assets/ME2.0.png" alt="">
+            <br>
+            <a href="#header">
+                <h2>Rui</h2>
+            </a>
+            <br>
+            <nav>
+                <a href="#about">About</a>
+                <a href="#divWorks">Works</a>
+                <a href="#divContacts">Contact</a>
+        </div>
+        <div id="socials" class="container">
+            <a href="https://www.facebook.com/rui.filipe.14661?ref=bookmarks" class="col-sm-2"><img id="face"
+                    src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADIAAAAyCAYAAAAeP4ixAAAABmJLR0QA/wD/AP+gvaeTAAAB70lEQVRoge2avU4bQRSFz0YIJVSU2JGi+BmgoadAmDJSmpR0Vjp+HsBIFDwCvAU1UCEhAS9AESSUdKaJo4Q0+Sh8QStje3d2PbsTaz7JWmt2du45vntnf8ZSJBIpBLAJnAK/qJ8+Ay1tVxP7NQufRNclEwCPwDbQKJLRaQI0gB3TBHkyA5xZ5+0KNDoB7Jq20zyd+9Z5qQJtTgBLpu1nns4AVKCrEOP0valDjA+ikdCYqzog0JLUkbQu6aOkRNKDpDtJl5JOJF0kSVKuTn0WO7AF/M5x0bstrc+XEeAz8M8+x8AKsADM27S6Bhxmxa/VCLAI9Gzor2Xi122kY8Oel41f93Vkw7bH6UY7tQ6Ab8+1M7WInjLy3YZtDbUfjav20vo8Gfljw74dav9h7avAu5xj1Wpk5JhFYtVdI97xZiTP+T6qb4oPLvFCzUgvSZJ7lwO8G0lSTNpn+z/ZrmvXOKFlZNm2N64HzowR77fx6WIfPr0mTAT/fUakAoUuecxI+tfPmoJHTQSuhJiRQkQjoRGNhEY0EhrRSGjMtJG+NFjuqlhLJsB7+/pqoWeUkSvbfvGmqDjPmrIfvIC2PTM/Mliza5aNXvYtCtAE9oC/dki+ZWqgO+aFQAjkW55OmWkzWKTvZwxcBcX+MBCJRF54An0dlgbD1gNdAAAAAElFTkSuQmCC"></a>
+            <a href="https://github.com/RuiFilipeSilva" class="col-sm-2"> <img id="git"
+                    src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADIAAAAyCAYAAAAeP4ixAAAABmJLR0QA/wD/AP+gvaeTAAADpklEQVRoge2ZW4hOaxjHnzUzDPZmMA7bFi5IuHDK8RKXlHa4QOFmhBJKKSWmuFLKFQqRGym1t0FJGdt5kBoZh4gcZoxxJhozfD8Xa02zZs37rfdZp1H6/vXdvIf///mt1ru+d71LpKCCCgqTk6YZ0FNEpovIZBEZJSKDRKSviBSJyFcReSMiD0SkTkQuOI7zIc38RAK6A4uBKqAZvVqBi8BKoM+vBCgGVgP1EYrPp0/Ati4HAqYCNSkABPUKWNYVAA6wHchlAOHXYaBHVhC9gGMZA/hVAwzMAuJKF0K0qRYYkBZEEXD8F0C06RpQmgbIzpCQPcBp4GuCQluAamAX8C3PmANJIWaFFHDfN64c2AS8iwDwBdgBDPX53AwZPz8uRDegLsT4qGHOYOCc138H+A846P3+xb3nfwD3gNGG+UdC8uqBP+OAbLRc0X155pUAg0N8y4CyPH17LZmbo0L0Al5bTA9FMtXlHrJkvgP+MM0tyuO5RERsj710n/Guyi39/URkkdqN9vs8TA2JSjbnvlDkVmvNyoDvCsP1GYCsU+S2AL01ZnMVZleBVN9lvGwHuKzInxeca1oj4xWZlY7jkLz0jvI8tyiGTgg2mEBGWUyaROSsIiyuzovIS8uYscEGE4jtafW/4zg/lEVFluM4ORG5YBk2JNhgArH9ez7XFpVA9Zb+TovdBGK72qmvjRgqCTaYQN5bTIalU0uohlv63wYbTCCPLCZzgE5XJC0B3URktmVYU7DBBPLQYlIuIouVdcXRUhHpbxlje6qJADMUf0gNwN+plN0xeyjQqMhfqDErBpoUZrX4XopSgrityAX4S2u6X2nYCCxICOAAi3DPtDSqi2Ku2W/5VQMsR7OZa8/oDawArkfM2hgFpBj3ddSvk8Aq4FZISAtQofDf4I2NqmaiHg/hHkz79R3YCpQCl/IEnUaxK/Y87sQA2R8JwgsrMoTlgAm4hwzPDUGanXOb/z8RIT6iXeSGsGl0vgV2e31T6LhAn0T0LgU+RwDRr408gZsChk/xTv6AgcAaYC0wLoZ3rRLiHEl3E7i3WFXAuDKRabv3eQXEE1I8/+2Bu5DblMM9JTSeT0XwrbZANBFh3WlDS4FTgaBm3NPIu8CJlEGeAWNShfAFl+B+Ims1BOuOaTr65QO5AYzIgiFYwEzgUQYgrUAl7la+a4T7NbcCeOwVURXD44w3N4d74D0xi1q1xZQAC4CRMeZOA3YDk7KoraCCCvoN9RMq7fqMWAa3TgAAAABJRU5ErkJggg=="></a>
+            <a href="https://www.instagram.com/ruifilipe.silva/" class="col-sm-2">
+                <img id="insta"
+                    src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADIAAAAyCAYAAAAeP4ixAAAABmJLR0QA/wD/AP+gvaeTAAAFGUlEQVRogc2ay29WRRjGn6lfTbwkWNpCqJhYJXKpKDEYXKjY6K7shFggLnTnP6CRhQtSAnhZGP8AL4Gq8bKhBWIigsSFl4Us1EKBFWC0RQPaQi9ffy7mfGS+OXNOz5yv7eezmznnvTxnzsz7zjtjVADAcknbJPVJekBSl6SVkm4rIh+BqqQ/JF2RdFHSkKRhY8xfDWkF1gAfAzM0DzPAIPBgGQK3A+8A000k4GMKeAtoDflsAiQ6JH0uaWsO138l/Rn9hYphhaS7c56flLTdGHM18w2gAzgX+BozwGHgeWDZAjse8mNZYusw4d/6LNCeJdwKnAwIDQNrF9v5LADrgGMBv04EfzPsnHAxB+wFUr/fUgNoAQYSn1wc9F9cQ3pi722S3zWf7gN6gU6nb5/n4xTQ7Qp94r0w1MyRAN4Aqokvk8DupL8FOO75OlgTWk79hJoBHmoiic2BX2gCu5oKWO/5Ow20tchG7Iqj61NjzLmmsLB4XOmwcKekjZJkjPlNNjzU0CqpryKbdrj4slFPgIqkTbKpzOqk+5Js6vGzMWY2R3wk0FeVNOr52O+0twn4yRvG0nECeAb4ELhKNsaBD4DMgAt85Lw/B+zxnrd5On8VcNnpuFaSwMOE1/r5MAz0ZOjsBV4BHst4/k+d38Cs0zEaEpqHxC7gRgkSNUwC/fNbStk97+ioVlSfilcjle2RNKD05JyV9K2kHyT9nvStkrRF0lOqX1zukDQIdBtj9keYd+dZi7yvE5poWSR2kV4mJ4EDZOVBupXPvRkYxTlgZ4T9EVe4FBHsnPAdGQXWRzjS4/0etQ8RnDOLReRogERHURKOns4AmeElIYJdYv2vWHgkAvp6AqObtxcKEmkpYftlr/1uEm1LwRjzi6T3vO6XohXFjAhQoT7YzZAzsSN86KQ+fxrHZgd5Mg2NyCZJy5326dwtZ0EYY8Ykfed0tUt6JEZHLJHVXvv7SPk8+Lp8W7mIJdLlta9EyufB13VvjHAsEbz2Qm6+fF2+rVzEEvG/mj9CjWDVPLZyEUvkstfeEimfhye89qUo6RLL77i3/EZH9IDeFdRn4WNAbl25oeU32dkNOV0VSa+W8N3Ha6rPwo8YY6Iy8TIpylZP5gYFE70MfRtJpyhPF5BbkKRx2JM7j1N/iiCxArjo6TpSUHZBiPRgk0WfTOGRSUbigqdjAtiwZEQSRf2kN1Y3sJumzNFJRuFt4KYnOwe8EGG/jogB3MBz1hizLkLZ65L2KR3MqpJOy251a/GgS3a5flLpky4k7THGHIghImmt29Fo8WFn4DeLwUTMSDh264oPfjnoeqzCRGkP6QWgCIYouSkDrjt6rgn40VN+TxnFifKt2OLbONkYA96nwBKbYydVoKtIuiBps/Pes5K+KGPAGHNK0ilsVN4km8HWstjLsmnHmehgl8ZzXvuMgBc9doMNGll0YE+aXewOHSvMUnAtbwawR3GpY4XaQ5/hMcoVJhYV2IOerzxfD7kvdJMOUANN9DkIbBXTxRT+RQLsYbyLOeyZXdNHJhmJ/aQziXStGHs8/Q1pHAcKR/uFBrAh8DsBfE1WyQhoxx7G+6jdB9lOA3Emwvk2YAf2kHY24M8I9qLPLYSucLRL+kxSb46tCdlbPIuBlZLuynl+QtKOQjeGkt/sYDKZ/i+4iZ0nuRXILELdZN8HWSpMA4eA+/N8LVSXwgacPtmj7EdlSzeLdbnmmmzqf0a2PnDUGPP3fEL/AQ/REgg1evV9AAAAAElFTkSuQmCC">
+            </a>
+        </div>
+        </nav>
+    </div>
+    <div class="main">
+        <img id="header" src="./assets/programming2.jpg" alt="">
+        <div id="title" class="container">
+            <p>Rui Silva</p>
+            <h3>Technology and Systems Web student at ESMAD</h3>
+            <h5>Personal site</h5>
+            <a href="#about" class="arrow"></a>
+        </div>
+        <br><br>
+        <!--ABOUT-->
+        <div id="about" class="container" data-aos="fade-up">
+            <br>
+            <h1>ABOUT</h1>
+            <br>
+            <div class="row">
+                <div class="container col-sm-6">
+                    <p>Hi my name is Rui Silva, i'm a currently studyng in a ESMAD and i'm trying graduating in
+                        Technology and
+                        Systems Web. In this graduation I'm learning many type of programming languages like: Python and
+                        C# but
+                        what we use more is JavaScript and CSS, I feel more confortable programming in JavaScript
+                        because I
+                        like more BackEnd, but, I'm trying to learnning more about CSS to fell more confortable with
+                        FrontEnd. I learn working with frameworks to like Vue and Bootstrap. I love do sports like
+                        footbal tennis and running, and i love tech and try make my life easier between then. <br> I
+                        make this site just
+                        for
+                        people know more about me!</p>
+                </div>
+                <div class="col-sm-1"></div>
+                <div class="container col-sm-5">
+                    <h2>Programming Languages</h2>
+                    <h5>JavaScript</h5>
+                    <div class="progress">
+                        <div class="progress-bar bg-secondary" role="progressbar" style="width: 80%;" aria-valuemin="0"
+                            aria-valuemax="100">8</div>
+                    </div>
+                    <br>
+                    <h5>CSS</h5>
+                    <div class="progress">
+                        <div class="progress-bar bg-secondary" role="progressbar" style="width: 70%;" aria-valuemin="0"
+                            aria-valuemax="100">7</div>
+                    </div>
+                    <br>
+                    <h5>C#</h5>
+                    <div class="progress">
+                        <div class="progress-bar bg-secondary" role="progressbar" style="width: 65%;" aria-valuemin="0"
+                            aria-valuemax="100">6.5</div>
+                    </div>
+                    <br>
+                    <h5>V-Python</h5>
+                    <div class="progress">
+                        <div class="progress-bar bg-secondary" role="progressbar" style="width: 50%;" aria-valuemin="0"
+                            aria-valuemax="100">5</div>
+                    </div>
+                    <br>
+                    <h2>Frameworks</h2>
+                    <h5>Vue</h5>
+                    <div class="progress">
+                        <div class="progress-bar bg-secondary" role="progressbar" style="width: 80%;" aria-valuemin="0"
+                            aria-valuemax="100">8</div>
+                    </div>
+                    <br>
+                    <h5>Bootstrap</h5>
+                    <div class="progress">
+                        <div class="progress-bar bg-secondary" role="progressbar" style="width: 70%;" aria-valuemin="0"
+                            aria-valuemax="100">7</div>
+                    </div>
+                </div>
+            </div>
+            <br>
+            <br>
+        </div>
+        <!--WORKS-->
+        <div id="divWorks">
+            <br>
+            <div id="works" class="container">
+                <h1>WORKS</h1>
+                <br>
+                <br>
+                <div class="row">
+                    <div class="container col-sm-4">
+                        <img id="pc" src="./assets/computer-icon-12-white-wineyard.png" class="float" alt="">
+                        <p><b>wineyard</b></p>
+                        <p>Website about Wine Oporto route when the user can create your own route ao know more about
+                            the wineries.Create in Vue.</p>
+                    </div>
+                    <div class="container col-sm-4">
+                        <img id="pc" src="./assets/computer-icon-12-white-pong.png" alt="">
+                        <p><b>Pong</b></p>
+                        <p>A simple game of Pong, with some extras like, if you lose a point your racket turn more
+                            smaller.Create in PyGame.</p>
+                    </div>
+                    <div class="container col-sm-4">
+                        <img id="pc" src="./assets/computer-icon-12-asteroids.png" alt="">
+                        <p><b>Asteroids</b></p>
+                        <p>Game based from the game developer from SEGA.Created in Canvas HTML and the initial animation
+                            in SVG with CSS.</p>
+                    </div>
+                </div>
+                <br>
+                <br>
+                <div>
+                    <p>All Works were done for some curricular subjects of my graduation</p>
+                </div>
+                <br><br>
+            </div>
+
+            </h1>
+        </div>
+        <div id="divContacts">
+            <br>
+            <div class="container">
+                <br>
+                <h1>CONTACTS</h1>
+                <br>
+                <div class="row">
+                    <div id="contacts" class="col-sm-6">
+                        <p><b>📧 e-mail:</b> rfcs23@gmail.com</p>
+                        <hr>
+                        <p><b>📱 Phone:</b> +351 919971610</p>
+                        <hr>
+                        <p><b>Facebook:</b> <a
+                                href="https://www.facebook.com/rui.filipe.14661?ref=bookmarks">/RuiSilva</a></p>
+                        <hr>
+                        <p><b>GitHub:</b>/<a href="https://github.com/RuiFilipeSilva"> RuiFilipeSilva</a></p>
+                    </div>
+                    <div class="col-sm-6">
+                        <img src="./assets/me-Recuperado.png" alt="">
+                    </div class=>
+                </div>
+                <br><br>
+            </div>
+            <br><br>
+        </div>
+
+
+
+    </div>
+
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+        integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous">
+    </script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+        integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous">
+    </script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+        integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous">
+    </script>
+</body>
+
+
+
+</html>
